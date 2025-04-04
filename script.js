@@ -12,63 +12,20 @@ const symbols = ['$', '$EMG'];
 const dollarImage = new Image();
 dollarImage.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEyLDJBMTAsMTAgMCAwLDEgMjIsMTJBMTAsMTAgMCAwLDEgMTIsMjJBMTAsMTAgMCAwLDEgMiwxMkExMCwxMCAwIDAsMSAxMiwyTTEyLDRBOCw4IDAgMCwwIDQsMTJBOCw4IDAgMCwwIDEyLDIwQTgsOCAwIDAsMCAyMCwxMkE4LDggMCAwLDAgMTIsNE0xMSw3SDEzVjlIMTVWMTFIMTNWMTNIMTVWMTVIMTNWMTdIMTFWMTVIOVYxM0gxMVYxMUg5VjlIMTFWN1oiLz48L3N2Zz4=';
 
-// Timer implementation
+// Remove the timer implementation and replace with static display
 function initializeCountdown() {
-    // Get the stored end time or set a new one 7 days from now
-    let endTime = localStorage.getItem('countdownEndTime');
-    if (!endTime) {
-        endTime = new Date().getTime() + (7 * 24 * 60 * 60 * 1000);
-        localStorage.setItem('countdownEndTime', endTime);
+    const timerElement = document.querySelector('.countdown-timer');
+    const countdownElement = document.getElementById('countdown');
+    
+    if (timerElement) {
+        timerElement.innerHTML = '<p>~7 days</p>';
     }
-
-    function updateTimer() {
-        const now = new Date().getTime();
-        const distance = endTime - now;
-
-        // Calculate time units
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Update the detailed countdown
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
-
-        if (daysElement) daysElement.textContent = String(days).padStart(2, '0');
-        if (hoursElement) hoursElement.textContent = String(hours).padStart(2, '0');
-        if (minutesElement) minutesElement.textContent = String(minutes).padStart(2, '0');
-        if (secondsElement) secondsElement.textContent = String(seconds).padStart(2, '0');
-
-        // Update the single-line countdown
-        const countdownElement = document.getElementById('countdown');
-        if (countdownElement) {
-            countdownElement.textContent = 
-                `${String(days).padStart(2, '0')}:${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-        }
-
-        // Check if countdown has ended
-        if (distance < 0) {
-            clearInterval(timerInterval);
-            const timerElement = document.querySelector('.countdown-timer');
-            if (timerElement) {
-                timerElement.innerHTML = '<p>Token Distribution Has Begun!</p>';
-            }
-            if (countdownElement) {
-                countdownElement.textContent = 'Token Distribution Has Begun!';
-            }
-            localStorage.removeItem('countdownEndTime');
-        }
+    if (countdownElement) {
+        countdownElement.textContent = '~7 days';
     }
-
-    // Start the timer
-    updateTimer();
-    const timerInterval = setInterval(updateTimer, 1000);
 }
 
-// Initialize the countdown when the DOM is loaded
+// Initialize the display when the DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeCountdown);
 
 function resizeCanvas() {
@@ -257,7 +214,4 @@ window.addEventListener('load', () => {
     requestAnimationFrame(animateWithFpsLimit);
     scheduleNextNotification();
     toggleScrollArrow();
-
-    // Initialize countdown timer
-    initializeCountdown(); // Initial call
 }); 
