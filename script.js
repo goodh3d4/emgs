@@ -13,7 +13,7 @@ const dollarImage = new Image();
 dollarImage.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEyLDJBMTAsMTAgMCAwLDEgMjIsMTJBMTAsMTAgMCAwLDEgMTIsMjJBMTAsMTAgMCAwLDEgMiwxMkExMCwxMCAwIDAsMSAxMiwyTTEyLDRBOCw4IDAgMCwwIDQsMTJBOCw4IDAgMCwwIDEyLDIwQTgsOCAwIDAsMCAyMCwxMkE4LDggMCAwLDAgMTIsNE0xMSw3SDEzVjlIMTVWMTFIMTNWMTNIMTVWMTVIMTNWMTdIMTFWMTVIOVYxM0gxMVYxMUg5VjlIMTFWN1oiLz48L3N2Zz4=';
 
 // Add this near the top of the file
-const launchDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 7 days from now
+Const launchDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000);
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
