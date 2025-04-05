@@ -12,22 +12,6 @@ const symbols = ['$', '$EMG'];
 const dollarImage = new Image();
 dollarImage.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEyLDJBMTAsMTAgMCAwLDEgMjIsMTJBMTAsMTAgMCAwLDEgMTIsMjJBMTAsMTAgMCAwLDEgMiwxMkExMCwxMCAwIDAsMSAxMiwyTTEyLDRBOCw4IDAgMCwwIDQsMTJBOCw4IDAgMCwwIDEyLDIwQTgsOCAwIDAsMCAyMCwxMkE4LDggMCAwLDAgMTIsNE0xMSw3SDEzVjlIMTVWMTFIMTNWMTNIMTVWMTVIMTNWMTdIMTFWMTVIOVYxM0gxMVYxMUg5VjlIMTFWN1oiLz48L3N2Zz4=';
 
-// Remove the timer implementation and replace with static display
-function initializeCountdown() {
-    const timerElement = document.querySelector('.countdown-timer');
-    const countdownElement = document.getElementById('countdown');
-    
-    if (timerElement) {
-        timerElement.innerHTML = '<p>~7 days</p>';
-    }
-    if (countdownElement) {
-        countdownElement.textContent = '~7 days';
-    }
-}
-
-// Initialize the display when the DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeCountdown);
-
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
